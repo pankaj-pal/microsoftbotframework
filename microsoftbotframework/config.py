@@ -49,7 +49,7 @@ class Config:
         try:
             with open(self.config_location, 'r') as stream:
                 try:
-                    yaml_config = yaml.load(stream)
+                    yaml_config = yaml.safe_load(stream)
                     for root, values in yaml_config.items():
                         try:
                             values.keys()
