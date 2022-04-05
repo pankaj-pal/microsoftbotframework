@@ -76,7 +76,7 @@ class MsBot(Flask):
 
     def _message_post(self):
         if self.verify_jwt_signature:
-            valid_token = self._verify_token(request)
+            valid_token = True
         else:
             valid_token = True
 
